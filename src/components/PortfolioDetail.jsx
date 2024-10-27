@@ -5,7 +5,7 @@ import { useMemo } from "react";
 export const PortfolioDetail = () => {
   const { id } = useParams();
   const portfolio = useMemo(() => getPortfolioById(id), [id]);
-  const portfolioImageUrl = `./public/${id}.jpg`;
+  const portfolioImageUrl = `/assets/${id}.jpg`;
 
   const navigate = useNavigate();
 
@@ -43,7 +43,7 @@ export const PortfolioDetail = () => {
           >
             <img
               className="w-4 h-4 min-w-4"
-              src={`./public/icons/arrow-left.svg`}
+              src={`/assets/icons/arrow-left.svg`}
               alt="arrow-left"
             />
             Go Back

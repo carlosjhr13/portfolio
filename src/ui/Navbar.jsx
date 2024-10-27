@@ -26,7 +26,7 @@ export const Navbar = () => {
         <button className="sm:hidden" onClick={onShowMenu}>
           <img
             className="w-4 h-4 min-w-4 xl:w-6 xl:h-6"
-            src={`./public/icons/menu.svg`}
+            src={`/assets/icons/menu.svg`}
             alt="arrow-left"
           />
         </button>

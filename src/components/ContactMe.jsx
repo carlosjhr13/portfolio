@@ -23,7 +23,7 @@ export const ContactMe = () => {
         <div
           className={`flex flex-col justify-between items-center bg-cover bg-center bg-no-repeat w-3/3 h-full min-h-full rounded-lg p-5 transition-all duration-700 ease-in-out`}
           style={{
-            backgroundImage: `url('./public/icons/${
+            backgroundImage: `url('/assets/icons/${
               content.image === "work"
                 ? "working-at-home"
                 : content.image === "music"
@@ -36,7 +36,7 @@ export const ContactMe = () => {
             <div className="flex items-center gap-2">
               <img
                 className="w-6 h-6 rounded-full object-cover"
-                src={`./public/icons/perfilPhoto.jpg`}
+                src={`/assets/icons/perfilPhoto.jpg`}
                 alt="Carlos Hernandez"
               />
               <p className="text-sm text-black">Carlos Hernandez</p>
@@ -48,7 +48,7 @@ export const ContactMe = () => {
             >
               <img
                 className="w-4 h-4 min-w-4"
-                src={`./public/icons/arrow-left.svg`}
+                src={`/assets/icons/arrow-left.svg`}
                 alt="arrow-left"
               />
               Back to Home
@@ -100,27 +100,27 @@ export const ContactMe = () => {
           <CardPersonalInfo
             title="Name"
             info="Carlos Hernandez"
-            img={`./public/icons/signature-solid.svg`}
+            img={`/assets/icons/signature-solid.svg`}
           />
           <CardPersonalInfo
             title="Country"
             info="Uruguay"
-            img={`./public/icons/earth-americas-solid.svg`}
+            img={`/assets/icons/earth-americas-solid.svg`}
           />
           <CardPersonalInfo
             title="Language"
             info="Spanish - English"
-            img={`./public/icons/language-solid.svg`}
+            img={`/assets/icons/language-solid.svg`}
           />
           <CardPersonalInfo
             title="Email"
             info="carlosjhr13@gmail.com"
-            img={`./public/icons/envelope-regular.svg`}
+            img={`/assets/icons/envelope-regular.svg`}
           />
           <CardPersonalInfo
             title="Phone"
             info="+598 97979539"
-            img={`./public/icons/mobile-screen-button-solid.svg`}
+            img={`/assets/icons/mobile-screen-button-solid.svg`}
           />
         </div>
       </div>

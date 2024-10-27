@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 /* eslint-disable react/prop-types */
 export const PortfolioCard = ({ id, category, title, year }) => {
-  const portfolioImageUrl = `./public/${id}.jpg`;
+  const portfolioImageUrl = `/assets/${id}.jpg`;
 
   return (
     <div className="flex justify-center bg-white shadow-black-500/50 shadow-lg p-3 text-gray-900 font-quicksand rounded-lg max-w-[100%] h-auto">

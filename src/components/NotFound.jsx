@@ -22,7 +22,7 @@ export const NotFound = () => {
         >
           <img
             className="w-4 h-4 min-w-4"
-            src={`./public/icons/arrow-left.svg`}
+            src={`/assets/icons/arrow-left.svg`}
             alt="arrow-left"
           />
           Back to Home
