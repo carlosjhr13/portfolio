@@ -10,20 +10,20 @@ export const Home = () => {
   return (
     <div>
       <div className="flex w-full h-full sm:h-screen px-10 gap-40 sm:justify-between pt-20 md:pt-28 sm:pt-0">
-        {/* < className="flex w-full h-screen px-10 gap-40 bg-[url('/public/icons/background.jpeg')]"> */}
+        {/* < className="flex w-full h-screen px-10 gap-40 bg-[url('./public/icons/background.jpeg')]"> */}
         <div className="sm:flex flex-col sm:justify-end sm:items-center gap-4 mb-10 hidden">
           <span className="w-[1px] h-1/3 bg-gray-800"></span>
           <a href="https://www.linkedin.com/in/carlosjhr12/">
             <img
               className="w-4 h-4 min-w-4 xl:w-6 xl:h-6"
-              src={`/public/icons/linkeding.svg`}
+              src={`./public/icons/linkeding.svg`}
               alt="linkeding"
             />
           </a>
           <a href="https://wa.link/2ha34r">
             <img
               className="w-4 h-4 min-w-4 xl:w-6 xl:h-6"
-              src={`/public/icons/whatsapp.svg`}
+              src={`./public/icons/whatsapp.svg`}
               alt="whatsapp"
             />
           </a>
@@ -47,7 +47,7 @@ export const Home = () => {
           </div>
           <img
             className="h-[90%] self-end object-cover"
-            src={`/public/imagenPerfil.png`}
+            src={`./public/imagenPerfil.png`}
             alt="Carlos Hernandez"
           />
         </section>

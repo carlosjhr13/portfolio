@@ -20,7 +20,7 @@ export const AboutMe = () => {
                   <p className="text-xl font-semibold">Profile</p>
                   <img
                     className="w-28 h-28 rounded-full object-cover"
-                    src={`/public/icons/perfilPhoto.jpg`}
+                    src={`./public/icons/perfilPhoto.jpg`}
                     alt="Carlos Hernandez"
                   />
                 </div>
