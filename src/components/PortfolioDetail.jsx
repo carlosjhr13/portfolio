@@ -5,7 +5,7 @@ import { useMemo } from "react";
 export const PortfolioDetail = () => {
   const { id } = useParams();
   const portfolio = useMemo(() => getPortfolioById(id), [id]);
-  const portfolioImageUrl = `./assets/${id}.jpg`;
+  const portfolioImageUrl = `/assets/${id}.jpg`;
 
   const navigate = useNavigate();
 
@@ -38,12 +38,12 @@ export const PortfolioDetail = () => {
             </div>
           </div>
           <button
-            className="flex items-center gap-2 bg-black/10 px-2 py-1 rounded-full"
+            className="flex items-center gap-2 bg-black/10 hover:bg-black/30 px-2 py-1 rounded-full"
             onClick={onNavigateBack}
           >
             <img
               className="w-4 h-4 min-w-4"
-              src={`./assets/icons/arrow-left.svg`}
+              src={`/assets/icons/arrow-left.svg`}
               alt="arrow-left"
             />
             Go Back
@@ -52,7 +52,7 @@ export const PortfolioDetail = () => {
 
         <div className="flex flex-col gap-4 items-center justify-center w-full">
           <img
-            className="w-full"
+            className="w-full shadow-black-500/50 shadow-lg rounded-lg"
             src={portfolioImageUrl}
             alt={portfolio.title}
           />
