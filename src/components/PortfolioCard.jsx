@@ -27,9 +27,9 @@ export const PortfolioCard = ({ id, category, title, year }) => {
                 <span className="text-xs text-gray-500">year</span> {year}
               </p>
               <Link to={`/detail/${id}`}>
-                <p className="px-4 py-1 rounded-full bg-orange-500 text-white w-fit text-xs font-semibold">
+                <button className="px-4 py-1 rounded-full bg-orange-600 hover:bg-orange-500 text-white w-fit text-xs font-semibold">
                   more
-                </p>
+                </button>
               </Link>
             </div>
           </div>

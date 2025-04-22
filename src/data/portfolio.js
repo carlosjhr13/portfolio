@@ -450,5 +450,6 @@ export const portfolios = [
     title: "Barber Shop Identity",
     description: "",
     year: 2023,
+    url: "https://www.instagram.com/santanaa_studioo/",
   },
 ];

@@ -40,3 +40,7 @@ body {
 .cardContent {
   width: -webkit-fill-available;
 }
+
+.active {
+  font-weight: bold;
+}
