@@ -24,8 +24,9 @@ export const Navbar = () => {
   };
 
   return (
+    // xl:bg-red-300 lg:bg-yellow-300 md:bg-blue-300 sm:bg-pink-500
     <nav
-      className={`flex justify-center bg-white/40 backdrop-blur-md h-[70px] md:h-[50px] px-6 fixed right-0 top-0 left-0 z-10 xl:h-[70px] xl:px-20 ${
+      className={`flex justify-center bg-white/40 backdrop-blur-md h-[70px] px-6 fixed right-0 top-0 left-0 z-10 xl:h-[70px] xl:px-20 ${
         isScrolled ? "shadow-md" : ""
       }`}
     >
@@ -38,16 +39,15 @@ export const Navbar = () => {
             JUST<span className="font-bold">ME</span>
           </p>
         </Link>
-
-        <button className="sm:hidden" onClick={onShowMenu}>
+        <button className="lg:hidden" onClick={onShowMenu}>
           <img
-            className="w-6 h-6 min-w-4 xl:w-6 xl:h-6 brightness-0 invert"
+            className="w-6 h-6 min-w-4 xl:w-6 xl:h-6"
             src={`./assets/icons/menu.svg`}
-            alt="arrow-left"
+            alt="menu"
           />
         </button>
 
-        <div className="sm:flex items-center gap-4 text-sm xl:text-md xl:gap-6 hidden">
+        <div className="lg:flex items-center gap-4 text-sm lg:text-md lg:gap-6 hidden">
           <NavLink
             className={({ isActive }) => `${isActive ? "active" : ""}`}
             to="/about"
@@ -71,7 +71,7 @@ export const Navbar = () => {
         </div>
 
         {menuOpen && (
-          <div className="absolute top-[70px] right-0 left-0 bg-white shadow-md p-4 flex flex-col items-center gap-4 sm:hidden">
+          <div className="absolute top-[70px] right-0 left-0 bg-white shadow-md p-4 flex flex-col items-center gap-4 lg:hidden">
             <NavLink
               className={({ isActive }) => `${isActive ? "active" : ""}`}
               to="/about"

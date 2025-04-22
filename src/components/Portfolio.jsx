@@ -11,8 +11,8 @@ export const Portfolio = () => {
 
   return (
     <div className="px-10 pt-[70px]">
-      <div className="flex justify-center sticky top-5 z-10 mb-4">
-        <div className="flex gap-4">
+      <div className="flex justify-center sticky top-6 z-10 mb-4">
+        <div className="flex gap-2 md:gap-4">
           <a
             href="#"
             onClick={() => handleCategoryChange("all")}
