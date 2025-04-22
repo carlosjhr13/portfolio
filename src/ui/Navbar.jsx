@@ -1,9 +1,19 @@
 import { Link, NavLink, useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export const Navbar = () => {
   const navigate = useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 0);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const onContact = () => {
     navigate("/contact");
@@ -14,7 +24,7 @@ export const Navbar = () => {
   };
 
   return (
-    <nav className="flex justify-center bg-white/40 backdrop-blur-md h-[70px] md:h-[50px] px-6 fixed right-0 top-0 left-0 z-10 xl:h-[70px] xl:px-20 shadow-md">
+    <nav className={`flex justify-center bg-white/40 backdrop-blur-md h-[70px] md:h-[50px] px-6 fixed right-0 top-0 left-0 z-10 xl:h-[70px] xl:px-20 ${isScrolled ? 'shadow-md' : ''}`}>
       <div className="flex w-full items-center justify-between">
         <Link
           className={({ isActive }) => `${isActive ? "active" : ""}`}

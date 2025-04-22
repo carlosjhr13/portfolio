@@ -5,7 +5,7 @@ import { useState } from "react";
 export const ContactMe = () => {
   const [content, setContent] = useState({
     image: "work",
-    text: "Me apasiona lo que hago, disfruto asumir nuevos retos que me permitan aprender y crecer profesionalmente, encontrando satisfacción en el esfuerzo y los resultados de mi trabajo.",
+    text: "I am passionate about what I do, I enjoy taking on new challenges that allow me to learn and grow professionally, finding satisfaction in the effort and results of my work.",
   });
   const navigate = useNavigate();
 
@@ -63,7 +63,7 @@ export const ContactMe = () => {
                 onClick={() =>
                   handleImageChange(
                     "work",
-                    "Me apasiona lo que hago, disfruto asumir nuevos retos que me permitan aprender y crecer profesionalmente, encontrando satisfacción en el esfuerzo y los resultados de mi trabajo."
+                    "I am passionate about what I do, I enjoy taking on new challenges that allow me to learn and grow professionally, finding satisfaction in the effort and results of my work."
                   )
                 }
               />
@@ -74,11 +74,10 @@ export const ContactMe = () => {
                 onClick={() =>
                   handleImageChange(
                     "music",
-                    "La música es mi compañera constante mientras trabajo. Escuchar mis canciones favoritas me ayuda a concentrarme, relajarme y encontrar la inspiración que necesito para dar lo mejor de mí en cada tarea."
+                    "Music is my constant companion while I work. Listening to my favorite songs helps me concentrate, relax, and find the inspiration I need to give my best in every task."
                   )
                 }
               />
-
               <button
                 className={`w-10 h-3 rounded-full ${
                   content.image === "default" ? "bg-white" : "bg-white/50"
@@ -86,7 +85,7 @@ export const ContactMe = () => {
                 onClick={() =>
                   handleImageChange(
                     "default",
-                    "El tiempo en familia es invaluable para mí. Encontrar un equilibrio entre el trabajo y los momentos con mis seres queridos es esencial, ya que ellos son mi fuente de motivación y energía para seguir adelante cada día."
+                    "Family time is invaluable to me. Finding a balance between work and moments with my loved ones is essential, as they are my source of motivation and energy to keep moving forward each day."
                   )
                 }
               />
