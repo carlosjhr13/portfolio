@@ -1,11 +1,15 @@
 import { Navigate, useNavigate, useParams } from "react-router";
 import { getPortfolioById } from "../helpers/getPortfolioById";
-import { useMemo } from "react";
+import { useMemo, useEffect } from "react";
 
 export const PortfolioDetail = () => {
   const { id } = useParams();
   const portfolio = useMemo(() => getPortfolioById(id), [id]);
   const portfolioImageUrl = `/assets/${id}.jpg`;
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const navigate = useNavigate();
 
@@ -37,17 +41,34 @@ export const PortfolioDetail = () => {
               </p>
             </div>
           </div>
-          <button
-            className="flex items-center gap-2 bg-black/10 hover:bg-black/30 px-2 py-1 rounded-full"
-            onClick={onNavigateBack}
-          >
-            <img
-              className="w-4 h-4 min-w-4"
-              src={`/assets/icons/arrow-left.svg`}
-              alt="arrow-left"
-            />
-            Go Back
-          </button>
+          <div className="flex items-center gap-2">
+            <button
+              className="flex items-center gap-2 bg-black/10 hover:bg-black/30 px-2 py-1 rounded-full"
+              onClick={onNavigateBack}
+            >
+              <img
+                className="w-4 h-4 min-w-4"
+                src={`/assets/icons/arrow-left.svg`}
+                alt="arrow-left"
+              />
+              Go Back
+            </button>
+            {portfolio.url && (
+              <a
+                href={portfolio.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-1 rounded-full"
+              >
+                <img
+                  className="w-4 h-4 min-w-4"
+                  src={`/assets/icons/go-to-url.svg`}
+                  alt="external-link"
+                />
+                View Live Example
+              </a>
+            )}
+          </div>
         </div>
 
         <div className="flex flex-col gap-4 items-center justify-center w-full">
@@ -56,7 +77,7 @@ export const PortfolioDetail = () => {
             src={portfolioImageUrl}
             alt={portfolio.title}
           />
-          <div>
+          <div className="w-full">
             <p>{portfolio.description}</p>
           </div>
         </div>

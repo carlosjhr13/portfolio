@@ -1,7 +1,7 @@
 import { portfolios } from "../data/portfolio";
 
 export const getPortfolioByCategory = (category) => {
-  const validCategories = ["all", "brand", "branding", "ux"];
+  const validCategories = ["all", "brand", "branding", "ux", "developing"];
 
   if (!validCategories.includes(category)) {
     throw new Error(`${category} no existe actualmente`);

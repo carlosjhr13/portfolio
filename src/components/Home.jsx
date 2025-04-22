@@ -34,9 +34,9 @@ export const Home = () => {
               I am <br /> Carlos Hernandez
             </h2>
             <div className="description max-w-[600px] xl:text-2xl md:text-sm xl:max-w-4xl">
-              Soy diseñador UX/UI y desarrollador web enfocado en crear
-              experiencias digitales intuitivas y atractivas. Combino diseño y
-              desarrollo para transformar ideas en soluciones funcionales.
+              I am a software engineer and UX designer focused on creating
+              intuitive and attractive digital experiences. I combine design and
+              development to transform ideas into functional solutions.
             </div>
             <button
               className="px-5 py-2 rounded-full bg-blue-900 text-white sm:w-fit text-sm xl:text-2xl xl:px-8 xl:py-2"

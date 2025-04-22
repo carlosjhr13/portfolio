@@ -2,7 +2,8 @@ import { CurriculumItemData } from "../ui/CurriculumItemData";
 
 export const AboutMe = () => {
   return (
-    <div className="w-full h-full lg:px-10 pt-[70px] flex items-center justify-center font-quicksand xl:bg-red-300 lg:bg-yellow-300 md:bg-blue-300 sm:bg-pink-500">
+    // xl:bg-red-300 lg:bg-yellow-300 md:bg-blue-300 sm:bg-pink-500
+    <div className="w-full h-full lg:px-10 pt-[70px] flex items-center justify-center font-quicksand">
       <div className="bg-gray-50 w-full h-full px-4 lg:px-10 py-10 lg:pl-20 flex flex-col items-center rounded-lg shadow-black-800 shadow-2xl max-w-[1280px]">
         <div className="w-full pb-20">
           <h2 className="text-6xl font-bold">Carlos Hernandez</h2>
@@ -27,16 +28,15 @@ export const AboutMe = () => {
               </div>
               <div className="col-span-3">
                 <p className="text-sm text-center md:text-start">
-                  Soy un diseñador UI/UX con más de 5 años de experiencia y una
-                  sólida base en desarrollo web. Mi habilidad para integrar
-                  diseño y desarrollo me permite crear soluciones efectivas y
-                  viables, garantizando que las experiencias de usuario sean no
-                  solo atractivas, sino también técnicamente realizables.
+                  I am a software engineer and UI/UX designer with over 5 years
+                  of experience. My ability to integrate design and development
+                  allows me to create effective and viable solutions, ensuring
+                  that user experiences are not only attractive but also
+                  technically feasible.
                   <br />
-                  Apasionado por la investigación de usuarios y el diseño
-                  centrado en el usuario, creo que la colaboración y la
-                  confianza son fundamentales para lograr resultados
-                  excepcionales.
+                  Passionate about user research and user-centered design, I
+                  believe that collaboration and trust are fundamental to
+                  achieving exceptional results.
                 </p>
               </div>
             </div>
@@ -58,25 +58,28 @@ export const AboutMe = () => {
             <CurriculumItemData
               year="2021 - Present"
               company="Globant"
-              titlePosition="UI/UX Designer & Frontend Developer"
-              description="• Diseñé interfaces intuitivas y funcionales para aplicaciones web, mejorando la experiencia del usuario y asegurando la implementación efectiva con el equipo de desarrollo. • Realicé investigaciones de usuarios y pruebas de usabilidad que resultaron en una mejora del 25% en la satisfacción del usuario según encuestas post-implementación. • Colaboré con equipos multidisciplinarios utilizando metodologías ágiles, garantizando la entrega de productos de alta calidad y alineados con las expectativas del cliente. •	He trabajado con clientes como (Autodesk, Cencosud, SEVEN Park)"
+              logoCompany={`./assets/icons/company-globant.png`}
+              titlePosition="Software Engineer"
+              description="• Designed intuitive and functional interfaces for web applications, improving user experience and ensuring effective implementation with the development team. • Conducted user research and usability testing that resulted in a 25% improvement in user satisfaction according to post-implementation surveys. • Collaborated with multidisciplinary teams using agile methodologies, ensuring the delivery of high-quality products aligned with client expectations. • Worked with clients such as (Autodesk, Cencosud, SEVEN Park - Qiddiya)"
             />
             <CurriculumItemData
               year="2021 - Present"
               company="PetMimo"
-              titlePosition="UI/UX Designer & Frontend Developer"
-              description="• Creé y desarrollé las interfaces de usuario para la App y la web, asegurando una experiencia fluida y atractiva a través de un enfoque centrado en el usuario. •	Cree un producto para la App que consiste en un QR para que sean usados por las mascotas y sean encontradas en caso de perdida. Diseño de interfaz y de producto físico. •	Integré principios de diseño y desarrollo, lo que me permitió comunicarme eficazmente con los desarrolladores y optimizar el proceso de implementación."
+              logoCompany={`./assets/icons/company-petmimo.png`}
+              titlePosition="UI/UX Designer & Software Engineer"
+              description="• Created and developed user interfaces for the App and web, ensuring a smooth and attractive experience through a user-centered approach. • Created a product for the App consisting of a QR code to be used by pets to be found in case of loss. Interface and physical product design. • Integrated design and development principles, which allowed me to communicate effectively with developers and optimize the implementation process."
             />
             <CurriculumItemData
               year="2016 - 2017"
               company="Croma"
+              logoCompany={`./assets/icons/company-croma.jpeg`}
               titlePosition="Graphic Designer"
-              description="• Desarrollé sistemas de señalización y manuales de identidad que mejoraron la visibilidad de marcas en el mercado. • Coordiné más de 10 proyectos de diseño gráfico, entregando resultados que aumentaron la satisfacción del cliente en un 90%. • Participe en la realización de diseños web e interfaces para pequeñas funcionalidades en App."
+              description="• Developed signage systems and identity manuals that improved brand visibility in the market. • Coordinated more than 10 graphic design projects, delivering results that increased customer satisfaction by 90%. • Participated in the creation of web designs and interfaces for small App functionalities."
             />
           </div>
         </div>
         {/* Hard Skills */}
-        <div className="grid md:grid-cols-3 grid-cols-1 pb-16">
+        <div className="grid md:grid-cols-3 grid-cols-1 pb-16 w-full">
           <div className="">
             <div className="text-xl text-black font-bold">Hard Skills</div>
             <hr className="w-1/4 border border-black mt-4 md:flex hidden" />
@@ -121,7 +124,7 @@ export const AboutMe = () => {
               year=""
               company=""
               titlePosition=""
-              description="•	Excelentes habilidades de comunicación para presentar y defender ideas de diseño. •	Capacidad para colaborar eficazmente con equipos interdisciplinarios, optimizando el flujo de trabajo entre diseño y desarrollo. •	Fuertes habilidades analíticas y de resolución de problemas. •	Gestión del tiempo y organización excepcional. •	Pasión por crear experiencias centradas en el usuario"
+              description="• Excellent communication skills to present and defend design ideas. • Ability to collaborate effectively with interdisciplinary teams, optimizing workflow between design and development. • Strong analytical and problem-solving skills. • Exceptional time management and organization. • Passion for creating user-centered experiences"
             />
           </div>
         </div>
@@ -140,16 +143,16 @@ export const AboutMe = () => {
               year="2008 - 2014"
               company="Instituto Superior de Diseño - ISDI"
               titlePosition="Visual Communication Designer "
-              description="Habilidades en diseño visual, identidad corporativa, y diseño editorial y digital, con conocimientos en tipografía, composición y uso del color. También están capacitados en producción audiovisual básica y tienen experiencia en la gestión de proyectos, lo que les permite trabajar en equipos multidisciplinarios. Su formación fomenta el pensamiento creativo y la resolución de problemas, permitiéndoles desarrollar soluciones innovadoras y efectivas para la comunicación visual en medios impresos y digitales."
+              description="Skills in visual design, corporate identity, and editorial and digital design, with knowledge in typography, composition, and color usage. Also trained in basic audiovisual production and experienced in project management, enabling work in multidisciplinary teams. Their training promotes creative thinking and problem solving, allowing them to develop innovative and effective solutions for visual communication in print and digital media."
             />
           </div>
         </div>
         <hr className="border-black w-1/3 pb-8" />
         <p className="text-center w-2/3 text-black text-sm">
-          Estoy emocionado por la posibilidad de aportar mi experiencia en
-          diseño y desarrollo al equipo, creando soluciones innovadoras y
-          centradas en el usuario. ¡No dudes en contactarme para más
-          información!
+          I am excited about the possibility of bringing my design and
+          development experience to the team, creating innovative and
+          user-centered solutions. Don&#39;t hesitate to contact me for more
+          information!
         </p>
       </div>
     </div>

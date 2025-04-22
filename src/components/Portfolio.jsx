@@ -34,12 +34,19 @@ export const Portfolio = () => {
           >
             Branding
           </a>
-          <a
+          {/* <a
             href="#"
             onClick={() => handleCategoryChange("ux")}
             className={category === "ux" ? "font-bold" : ""}
           >
             UX
+          </a> */}
+          <a
+            href="#"
+            onClick={() => handleCategoryChange("developing")}
+            className={category === "developing" ? "font-bold" : ""}
+          >
+            Developing
           </a>
         </div>
       </div>
