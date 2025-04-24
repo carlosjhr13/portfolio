@@ -121,6 +121,11 @@ export const ContactMe = () => {
             info="+598 97979539"
             img={`./assets/icons/mobile-screen-button-solid.svg`}
           />
+          <CardPersonalInfo
+            title="Linkedin"
+            info="carlosjhr12"
+            img={`./assets/icons/linkedin.svg`}
+          />
         </div>
       </div>
     </div>

@@ -26,8 +26,8 @@ export const Navbar = () => {
   return (
     // xl:bg-red-300 lg:bg-yellow-300 md:bg-blue-300 sm:bg-pink-500
     <nav
-      className={`flex justify-center bg-white/40 backdrop-blur-md h-[70px] px-6 fixed right-0 top-0 left-0 z-10 xl:h-[70px] xl:px-20 ${
-        isScrolled ? "shadow-md" : ""
+      className={`flex justify-center backdrop-blur-md h-[70px] px-6 fixed right-0 top-0 left-0 z-10 xl:h-[70px] xl:px-20 ${
+        isScrolled ? "shadow-md bg-white/40" : ""
       }`}
     >
       <div className="flex w-full items-center justify-between">
@@ -35,7 +35,7 @@ export const Navbar = () => {
           className={({ isActive }) => `${isActive ? "active" : ""}`}
           to="/"
         >
-          <p className="font-light text-MD text-orange-900 xl:text-md">
+          <p className="font-light text-MD text-gray-950 xl:text-md">
             JUST<span className="font-bold">ME</span>
           </p>
         </Link>
@@ -47,7 +47,7 @@ export const Navbar = () => {
           />
         </button>
 
-        <div className="lg:flex items-center gap-4 text-sm lg:text-md lg:gap-6 hidden">
+        <div className="lg:flex items-center gap-4 text-sm lg:text-md lg:gap-6 hidden text-gray-950">
           <NavLink
             className={({ isActive }) => `${isActive ? "active" : ""}`}
             to="/about"
@@ -63,7 +63,7 @@ export const Navbar = () => {
           </NavLink>
 
           <button
-            className="px-4 py-2 rounded-full bg-orange-900 hover:bg-orange-800 text-white sm:w-fit text-sm xl:text-md"
+            className="px-4 py-2 rounded-full bg-white/40 hover:bg-white/50 text-gray-900 sm:w-fit text-sm xl:text-md"
             onClick={onContact}
           >
             Contact Me
