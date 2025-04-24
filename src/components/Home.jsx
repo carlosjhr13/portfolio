@@ -1,7 +1,15 @@
 import { useNavigate } from "react-router";
+import { useTypewriter } from "../hooks/useTypewriter";
 
 export const Home = () => {
   const navigate = useNavigate();
+
+  const typedText = useTypewriter(
+    ["a Software Engineer", "a Designer"],
+    200,
+    150,
+    3000
+  );
 
   return (
     <div className="relative h-screen overflow-hidden">
@@ -25,6 +33,7 @@ export const Home = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
+            <span></span>
             <img
               className="w-4 h-4 min-w-4 xl:w-6 xl:h-6 brightness-0 invert"
               src={`./assets/icons/linkedin.svg`}
@@ -51,9 +60,12 @@ export const Home = () => {
                 HERNANDEZ
               </h2>
               <div className="description text-yellow-200 max-w-[600px] md:max-w-[400px] xl:text-lg xl:max-w-xl">
-                I am a software engineer and UX designer focused on creating
-                intuitive and attractive digital experiences. I combine design
-                and development to transform ideas into functional solutions.
+                I am{" "}
+                <span className="text-orange-950 font-bold">{typedText},</span>
+                <br />
+                focused on creating intuitive and attractive digital
+                experiences. I combine design and development to transform ideas
+                into functional solutions.
               </div>
             </div>
             <button
