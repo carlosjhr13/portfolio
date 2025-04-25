@@ -1,9 +1,10 @@
 import { PortfolioRouter } from "./router/PortfolioRouter";
+import { LanguageProvider } from './context/LanguageContext';
 
 export const PortfolioApp = () => {
   return (
-    <div className="">
+    <LanguageProvider>
       <PortfolioRouter />
-    </div>
+    </LanguageProvider>
   );
 };

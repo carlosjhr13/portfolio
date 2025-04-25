@@ -1,8 +1,11 @@
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { useLanguage } from "../context/LanguageContext";
+import { translations } from "../translations/translations";
 
 export const Navbar = () => {
   const navigate = useNavigate();
+  const { language, toggleLanguage } = useLanguage();
   const [menuOpen, setMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -23,6 +26,8 @@ export const Navbar = () => {
     setMenuOpen(!menuOpen);
   };
 
+  const t = translations[language];
+
   return (
     // xl:bg-red-300 lg:bg-yellow-300 md:bg-blue-300 sm:bg-pink-500
     <nav
@@ -32,7 +37,7 @@ export const Navbar = () => {
     >
       <div className="flex w-full items-center justify-between">
         <Link
-          className={({ isActive }) => `${isActive ? "active" : ""}`}
+          className="text-gray-950" // Fixed: removed function and used direct string
           to="/"
         >
           <p className="font-light text-MD text-gray-950 xl:text-md">
@@ -52,22 +57,48 @@ export const Navbar = () => {
             className={({ isActive }) => `${isActive ? "active" : ""}`}
             to="/about"
           >
-            About Me
+            {t.nav.aboutMe}
           </NavLink>
 
           <NavLink
             className={({ isActive }) => `${isActive ? "active" : ""}`}
             to="/portfolio"
           >
-            Portfolio
+            {t.nav.portfolio}
           </NavLink>
 
-          <button
-            className="px-4 py-2 rounded-full bg-white/40 hover:bg-white/50 text-gray-900 sm:w-fit text-sm xl:text-md"
+          <NavLink
+            className={({ isActive }) => `${isActive ? "active" : ""}`}
+            to="/contact"
+          >
+            {t.nav.contactMe}
+          </NavLink>
+
+          {/* <button
+            className="px-4 py-2 shadow-md rounded-full bg-white/40 hover:bg-white/50 text-gray-900 sm:w-fit text-sm xl:text-md"
             onClick={onContact}
           >
-            Contact Me
-          </button>
+            {t.nav.contactMe}
+          </button> */}
+
+          <div className="flex items-center p-[2px] rounded-full bg-white/40 shadow-md hover:bg-white/50">
+            <span
+              onClick={toggleLanguage}
+              className={`px-2 py-1 rounded-full transition-all duration-600 cursor-pointer ${
+                language === "en" ? "bg-orange-900 text-white" : ""
+              }`}
+            >
+              EN
+            </span>
+            <span
+              onClick={toggleLanguage}
+              className={`px-2 py-1 rounded-full transition-all duration-600 cursor-pointer ${
+                language === "es" ? "bg-orange-900 text-white" : ""
+              }`}
+            >
+              ES
+            </span>
+          </div>
         </div>
 
         {menuOpen && (

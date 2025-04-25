@@ -1,15 +1,14 @@
 import { useNavigate } from "react-router";
 import { useTypewriter } from "../hooks/useTypewriter";
+import { useLanguage } from "../context/LanguageContext";
+import { translations } from "../translations/translations";
 
 export const Home = () => {
   const navigate = useNavigate();
+  const { language } = useLanguage();
+  const t = translations[language];
 
-  const typedText = useTypewriter(
-    ["a Software Engineer", "a Designer"],
-    200,
-    150,
-    3000
-  );
+  const typedText = useTypewriter(t.home.typedPhrases, 200, 150, 3000);
 
   return (
     <div className="relative h-screen overflow-hidden">
@@ -60,16 +59,14 @@ export const Home = () => {
                 HERNANDEZ
               </h2>
               <div className="description text-yellow-200 max-w-[600px] md:max-w-[400px] xl:text-lg xl:max-w-xl">
-                I am{" "}
+                {t.home.intro}{" "}
                 <span className="text-orange-950 font-bold">{typedText},</span>
                 <br />
-                focused on creating intuitive and attractive digital
-                experiences. I combine design and development to transform ideas
-                into functional solutions.
+                {t.home.description}
               </div>
             </div>
             <button
-              className="px-4 py-2 rounded-full bg-white/40 hover:bg-white/50 text-gray-900 md:w-fit text-sm xl:text-md"
+              className="px-4 py-2 rounded-full bg-white/40 hover:bg-white/50 shadow-md text-gray-900 md:w-fit text-sm xl:text-md"
               onClick={() => navigate("/contact")}
             >
               Contact Me

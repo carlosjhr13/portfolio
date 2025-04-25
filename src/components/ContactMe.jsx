@@ -101,11 +101,11 @@ export const ContactMe = () => {
             info="Carlos Hernandez"
             img={`./assets/icons/signature-solid.svg`}
           />
-          <CardPersonalInfo
+          {/* <CardPersonalInfo
             title="Country"
             info="Uruguay"
             img={`./assets/icons/earth-americas-solid.svg`}
-          />
+          /> */}
           <CardPersonalInfo
             title="Language"
             info="Spanish - English"

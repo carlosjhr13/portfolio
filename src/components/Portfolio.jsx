@@ -1,9 +1,13 @@
 // import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import { PortfolioList } from "./PortfolioList";
+import { useLanguage } from '../context/LanguageContext';
+import { translations } from '../translations/translations';
 
 export const Portfolio = () => {
   const [category, setCategory] = useState("all");
+  const { language } = useLanguage();
+  const t = translations[language];
 
   const handleCategoryChange = (selectedCategory) => {
     setCategory(selectedCategory);
@@ -18,35 +22,28 @@ export const Portfolio = () => {
             onClick={() => handleCategoryChange("all")}
             className={category === "all" ? "font-bold" : ""}
           >
-            All
+            {t.portfolio.categories.all}
           </a>
           <a
             href="#"
             onClick={() => handleCategoryChange("brand")}
             className={category === "brand" ? "font-bold" : ""}
           >
-            Brand
+            {t.portfolio.categories.brand}
           </a>
           <a
             href="#"
             onClick={() => handleCategoryChange("branding")}
             className={category === "branding" ? "font-bold" : ""}
           >
-            Branding
+            {t.portfolio.categories.branding}
           </a>
-          {/* <a
-            href="#"
-            onClick={() => handleCategoryChange("ux")}
-            className={category === "ux" ? "font-bold" : ""}
-          >
-            UX
-          </a> */}
           <a
             href="#"
             onClick={() => handleCategoryChange("developing")}
             className={category === "developing" ? "font-bold" : ""}
           >
-            Developing
+            {t.portfolio.categories.developing}
           </a>
         </div>
       </div>
