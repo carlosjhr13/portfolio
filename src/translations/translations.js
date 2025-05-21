@@ -12,6 +12,7 @@ export const translations = {
       description:
         "focused on creating intuitive and attractive digital experiences. I combine design and development to transform ideas into functional solutions.",
       contactButton: "Contact Me",
+      downloadCV: "Download CV",
     },
     portfolio: {
       categories: {
@@ -34,7 +35,6 @@ export const translations = {
         items: [
           "Location: Uruguay",
           "email: carlosjhr13@gmail.com",
-          "Language: Spanish - English B1",
           "Phone: +598 97 979 539",
         ],
       },
@@ -160,6 +160,7 @@ export const translations = {
       description:
         "enfocado en crear experiencias digitales intuitivas y atractivas. Combino diseño y desarrollo para transformar ideas en soluciones funcionales.",
       contactButton: "Contáctame",
+      downloadCV: "Descargar CV",
     },
     portfolio: {
       categories: {

@@ -181,6 +181,11 @@ export const AboutMe = () => {
               <div className="border-t-2 border-blue-600 col-span-3"></div>
             </div>
             <CurriculumItemData
+              year="2018 - Present"
+              company="Self-taught - (Udemy, Globant University, FreeCodeCamp) "
+              titlePosition="Frontend Developer"
+            />
+            <CurriculumItemData
               year="2008 - 2014"
               company="Instituto Superior de Diseño - ISDI"
               titlePosition="Visual Communication Designer "

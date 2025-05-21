@@ -1,10 +1,10 @@
-import { useNavigate } from "react-router";
+// import { useNavigate } from "react-router";
 import { useTypewriter } from "../hooks/useTypewriter";
 import { useLanguage } from "../context/LanguageContext";
 import { translations } from "../translations/translations";
 
 export const Home = () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const { language } = useLanguage();
   const t = translations[language];
 
@@ -54,7 +54,7 @@ export const Home = () => {
         <section className="flex flex-1 xl:justify-center flex-col">
           <div className="info flex flex-col justify-between xl:justify-center gap-10 xl:gap-6 h-full">
             <div className="flex flex-col gap-8">
-              <h2 className="name text-yellow-200 text-5xl font-bold font-quicksand xl:text-8xl">
+              <h2 className="name text-yellow-200 text-5xl font-bold xl:text-8xl">
                 CARLOS <br />
                 HERNANDEZ
               </h2>
@@ -65,12 +65,27 @@ export const Home = () => {
                 {t.home.description}
               </div>
             </div>
-            <button
+            {/* <button
               className="px-4 py-2 rounded-full bg-white/40 hover:bg-white/50 shadow-md text-gray-900 md:w-fit text-sm xl:text-md"
               onClick={() => navigate("/contact")}
             >
               Contact Me
-            </button>
+            </button> */}
+
+            <div className="flex flex-col gap-4">
+              <a
+                href="./assets/cv.pdf"
+                download
+                className="flex items-center justify-center gap-2 px-4 py-2 rounded-full bg-white/40 hover:bg-white/50 shadow-md text-gray-900 md:w-fit text-sm xl:text-md"
+              >
+                {t.home.downloadCV}
+                <img
+                  className="w-4 h-4"
+                  src="./assets/icons/download.svg"
+                  alt="download"
+                />
+              </a>
+            </div>
           </div>
           <img
             className="h-[70%] md:h-[110%] absolute bottom-0 right-0 md:-bottom-40 lg:-bottom-20 self-end object-cover -z-10"
