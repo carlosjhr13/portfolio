@@ -73,8 +73,8 @@ export const Home = () => {
             </button>
           </div>
           <img
-            className="md:h-[110%] h-[60%] absolute bottom-0 md:-bottom-40 -md:right-60 lg:right-0 right-0 self-end object-cover -z-10"
-            src={`./assets/background-principal.png`}
+            className="h-[70%] md:h-[110%] absolute bottom-0 right-0 md:-bottom-40 lg:-bottom-20 self-end object-cover -z-10"
+            src={`./assets/background-principal2.png`}
             alt="Carlos Hernandez"
           />
         </section>

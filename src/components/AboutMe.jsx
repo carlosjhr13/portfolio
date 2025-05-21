@@ -30,7 +30,7 @@ export const AboutMe = () => {
                   <p className="text-xl font-semibold">{t.profile.title}</p>
                   <img
                     className="w-28 h-28 rounded-full object-cover"
-                    src={`./assets/icons/perfilPhoto.jpg`}
+                    src={`./assets/icons/perfilPhoto2.jpg`}
                     alt="Carlos Hernandez"
                   />
                 </div>

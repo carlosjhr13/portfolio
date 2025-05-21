@@ -36,21 +36,38 @@ export const Navbar = () => {
       }`}
     >
       <div className="flex w-full items-center justify-between">
-        <Link
-          className="text-gray-950" // Fixed: removed function and used direct string
-          to="/"
-        >
+        <Link className="text-gray-950" to="/">
           <p className="font-light text-MD text-gray-950 xl:text-md">
             JUST<span className="font-bold">ME</span>
           </p>
         </Link>
-        <button className="lg:hidden" onClick={onShowMenu}>
-          <img
-            className="w-6 h-6 min-w-4 xl:w-6 xl:h-6"
-            src={`./assets/icons/menu.svg`}
-            alt="menu"
-          />
-        </button>
+        <div className="flex items-center gap-4">
+          <div className="flex items-center p-[2px] rounded-full bg-white/40 shadow-md hover:bg-white/50 lg:hidden">
+            <span
+              onClick={toggleLanguage}
+              className={`px-2 py-1 rounded-full transition-all duration-600 cursor-pointer text-xs ${
+                language === "en" ? "bg-orange-900 text-white" : ""
+              }`}
+            >
+              EN
+            </span>
+            <span
+              onClick={toggleLanguage}
+              className={`px-2 py-1 rounded-full transition-all duration-600 cursor-pointer text-xs ${
+                language === "es" ? "bg-orange-900 text-white" : ""
+              }`}
+            >
+              ES
+            </span>
+          </div>
+          <button className="lg:hidden" onClick={onShowMenu}>
+            <img
+              className="w-6 h-6 min-w-4 xl:w-6 xl:h-6"
+              src={`./assets/icons/menu.svg`}
+              alt="menu"
+            />
+          </button>
+        </div>
 
         <div className="lg:flex items-center gap-4 text-sm lg:text-md lg:gap-6 hidden text-gray-950">
           <NavLink
@@ -74,17 +91,10 @@ export const Navbar = () => {
             {t.nav.contactMe}
           </NavLink>
 
-          {/* <button
-            className="px-4 py-2 shadow-md rounded-full bg-white/40 hover:bg-white/50 text-gray-900 sm:w-fit text-sm xl:text-md"
-            onClick={onContact}
-          >
-            {t.nav.contactMe}
-          </button> */}
-
           <div className="flex items-center p-[2px] rounded-full bg-white/40 shadow-md hover:bg-white/50">
             <span
               onClick={toggleLanguage}
-              className={`px-2 py-1 rounded-full transition-all duration-600 cursor-pointer ${
+              className={`px-2 py-1 rounded-full transition-all duration-600 cursor-pointer text-xs ${
                 language === "en" ? "bg-orange-900 text-white" : ""
               }`}
             >
@@ -92,7 +102,7 @@ export const Navbar = () => {
             </span>
             <span
               onClick={toggleLanguage}
-              className={`px-2 py-1 rounded-full transition-all duration-600 cursor-pointer ${
+              className={`px-2 py-1 rounded-full transition-all duration-600 cursor-pointer text-xs ${
                 language === "es" ? "bg-orange-900 text-white" : ""
               }`}
             >

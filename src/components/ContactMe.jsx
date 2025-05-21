@@ -1,20 +1,36 @@
 import { useNavigate } from "react-router";
 import { CardPersonalInfo } from "../ui/CardPersonalInfo";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useLanguage } from "../context/LanguageContext";
+import { translations } from "../translations/translations";
 
 export const ContactMe = () => {
+  const { language } = useLanguage();
+  const t = translations[language].contactMe;
+
   const [content, setContent] = useState({
     image: "work",
-    text: "I am passionate about what I do, I enjoy taking on new challenges that allow me to learn and grow professionally, finding satisfaction in the effort and results of my work.",
+    text: t.slides.work.text,
   });
+
+  useEffect(() => {
+    setContent((prevContent) => ({
+      ...prevContent,
+      text: t.slides[prevContent.image].text,
+    }));
+  }, [language, t]);
+
   const navigate = useNavigate();
 
   const onNavigateBack = () => {
     navigate("/");
   };
 
-  const handleImageChange = (selectedImage, selectedText) => {
-    setContent({ image: selectedImage, text: selectedText });
+  const handleImageChange = (selectedImage) => {
+    setContent({
+      image: selectedImage,
+      text: t.slides[selectedImage].text,
+    });
   };
 
   return (
@@ -39,7 +55,7 @@ export const ContactMe = () => {
                 src={`./assets/icons/perfilPhoto.jpg`}
                 alt="Carlos Hernandez"
               />
-              <p className="text-sm text-black">Carlos Hernandez</p>
+              <p className="text-sm text-black">{t.personalInfo.name.info}</p>
             </div>
 
             <button
@@ -51,7 +67,7 @@ export const ContactMe = () => {
                 src={`./assets/icons/arrow-left.svg`}
                 alt="arrow-left"
               />
-              Back to Home
+              {t.backButton}
             </button>
           </div>
           <div className="flex flex-col gap-4">
@@ -60,34 +76,19 @@ export const ContactMe = () => {
                 className={`w-10 h-3 rounded-full ${
                   content.image === "work" ? "bg-white" : "bg-white/50"
                 }`}
-                onClick={() =>
-                  handleImageChange(
-                    "work",
-                    "I am passionate about what I do, I enjoy taking on new challenges that allow me to learn and grow professionally, finding satisfaction in the effort and results of my work."
-                  )
-                }
+                onClick={() => handleImageChange("work")}
               />
               <button
                 className={`w-10 h-3 rounded-full ${
                   content.image === "music" ? "bg-white" : "bg-white/50"
                 }`}
-                onClick={() =>
-                  handleImageChange(
-                    "music",
-                    "Music is my constant companion while I work. Listening to my favorite songs helps me concentrate, relax, and find the inspiration I need to give my best in every task."
-                  )
-                }
+                onClick={() => handleImageChange("music")}
               />
               <button
                 className={`w-10 h-3 rounded-full ${
-                  content.image === "default" ? "bg-white" : "bg-white/50"
+                  content.image === "family" ? "bg-white" : "bg-white/50"
                 }`}
-                onClick={() =>
-                  handleImageChange(
-                    "default",
-                    "Family time is invaluable to me. Finding a balance between work and moments with my loved ones is essential, as they are my source of motivation and energy to keep moving forward each day."
-                  )
-                }
+                onClick={() => handleImageChange("family")}
               />
             </div>
             <p className="right-0 bottom-0 left-0 backdrop-blur-md p-4 bg-white/30 text-black rounded-xl transition-all duration-700 ease-in-out">
@@ -97,33 +98,28 @@ export const ContactMe = () => {
         </div>
         <div className="md:flex flex-col gap-3 w-full md:w-1/3 h-full grid grid-cols-2 md:mt-0 mt-5 pb-8">
           <CardPersonalInfo
-            title="Name"
-            info="Carlos Hernandez"
+            title={t.personalInfo.name.title}
+            info={t.personalInfo.name.info}
             img={`./assets/icons/signature-solid.svg`}
           />
-          {/* <CardPersonalInfo
-            title="Country"
-            info="Uruguay"
-            img={`./assets/icons/earth-americas-solid.svg`}
-          /> */}
           <CardPersonalInfo
-            title="Language"
-            info="Spanish - English"
-            img={`./assets/icons/language-solid.svg`}
+            title={t.personalInfo.country.title}
+            info={t.personalInfo.country.info}
+            img={`./assets/icons/earth-americas-solid.svg`}
           />
           <CardPersonalInfo
-            title="Email"
-            info="carlosjhr13@gmail.com"
+            title={t.personalInfo.email.title}
+            info={t.personalInfo.email.info}
             img={`./assets/icons/envelope-regular.svg`}
           />
           <CardPersonalInfo
-            title="Phone"
-            info="+598 97979539"
+            title={t.personalInfo.phone.title}
+            info={t.personalInfo.phone.info}
             img={`./assets/icons/mobile-screen-button-solid.svg`}
           />
           <CardPersonalInfo
-            title="Linkedin"
-            info="carlosjhr12"
+            title={t.personalInfo.linkedin.title}
+            info={t.personalInfo.linkedin.info}
             img={`./assets/icons/linkedin.svg`}
           />
         </div>

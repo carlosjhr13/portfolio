@@ -66,9 +66,9 @@ export const translations = {
           description: [
             "Developed signage systems and identity manuals that improved brand visibility in the market",
             "Coordinated more than 10 graphic design projects, delivering results that increased customer satisfaction by 90%",
-            "Participated in the creation of web designs and interfaces for small App functionalities"
-          ]
-        }
+            "Participated in the creation of web designs and interfaces for small App functionalities",
+          ],
+        },
       },
       hardSkills: {
         title: "Hard Skills",
@@ -94,6 +94,7 @@ export const translations = {
           "Strong analytical and problem-solving skills",
           "Exceptional time management and organization",
           "Passion for creating user-centered experiences",
+          "English B1",
         ],
       },
       education: {
@@ -108,6 +109,42 @@ export const translations = {
       },
       footer:
         "I am excited about the possibility of bringing my design and development experience to the team, creating innovative and user-centered solutions. Don't hesitate to contact me for more information!",
+    },
+    contactMe: {
+      backButton: "Back to Home",
+      slides: {
+        work: {
+          text: "I am passionate about what I do, I enjoy taking on new challenges that allow me to learn and grow professionally, finding satisfaction in the effort and results of my work.",
+        },
+        music: {
+          text: "Music is my constant companion while I work. Listening to my favorite songs helps me concentrate, relax, and find the inspiration I need to give my best in every task.",
+        },
+        family: {
+          text: "Family time is invaluable to me. Finding a balance between work and moments with my loved ones is essential, as they are my source of motivation and energy to keep moving forward each day.",
+        },
+      },
+      personalInfo: {
+        name: {
+          title: "Name",
+          info: "Carlos Hernandez",
+        },
+        country: {
+          title: "Country",
+          info: "Uruguay",
+        },
+        email: {
+          title: "Email",
+          info: "carlosjhr13@gmail.com",
+        },
+        phone: {
+          title: "Phone",
+          info: "+598 97979539",
+        },
+        linkedin: {
+          title: "Linkedin",
+          info: "carlosjhr12",
+        },
+      },
     },
   },
   es: {
@@ -177,9 +214,9 @@ export const translations = {
           description: [
             "Desarrollé sistemas de señalización y manuales de identidad que mejoraron la visibilidad de la marca en el mercado",
             "Coordiné más de 10 proyectos de diseño gráfico, entregando resultados que aumentaron la satisfacción del cliente en un 90%",
-            "Participé en la creación de diseños web e interfaces para pequeñas funcionalidades de Apps"
-          ]
-        }
+            "Participé en la creación de diseños web e interfaces para pequeñas funcionalidades de Apps",
+          ],
+        },
       },
       hardSkills: {
         title: "Habilidades Técnicas",
@@ -219,6 +256,42 @@ export const translations = {
       },
       footer:
         "¡Estoy emocionado por la posibilidad de aportar mi experiencia en diseño y desarrollo al equipo, creando soluciones innovadoras y centradas en el usuario. ¡No dudes en contactarme para más información!",
+    },
+    contactMe: {
+      backButton: "Volver al Inicio",
+      slides: {
+        work: {
+          text: "Me apasiona lo que hago, disfruto asumir nuevos desafíos que me permitan aprender y crecer profesionalmente, encontrando satisfacción en el esfuerzo y los resultados de mi trabajo.",
+        },
+        music: {
+          text: "La música es mi compañera constante mientras trabajo. Escuchar mis canciones favoritas me ayuda a concentrarme, relajarme y encontrar la inspiración que necesito para dar lo mejor en cada tarea.",
+        },
+        family: {
+          text: "El tiempo en familia es invaluable para mí. Encontrar un equilibrio entre el trabajo y los momentos con mis seres queridos es esencial, ya que son mi fuente de motivación y energía para seguir adelante cada día.",
+        },
+      },
+      personalInfo: {
+        name: {
+          title: "Nombre",
+          info: "Carlos Hernandez",
+        },
+        country: {
+          title: "País",
+          info: "Uruguay",
+        },
+        email: {
+          title: "Correo",
+          info: "carlosjhr13@gmail.com",
+        },
+        phone: {
+          title: "Teléfono",
+          info: "+598 97979539",
+        },
+        linkedin: {
+          title: "Linkedin",
+          info: "carlosjhr12",
+        },
+      },
     },
   },
 };
