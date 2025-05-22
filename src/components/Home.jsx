@@ -24,7 +24,7 @@ export const Home = () => {
       />
 
       {/* Content */}
-      <div className="relative flex w-full h-full px-10 gap-20 sm:justify-between pt-20 pb-10 md:pt-28 sm:pt-0">
+      <div className="relative flex w-full h-full px-10 gap-20 sm:justify-between pt-20 pb-10 md:pt-28">
         <div className="xl:flex flex-col xl:justify-end xl:items-center gap-4 mb-10 hidden">
           <span className="w-[1px] h-1/3 bg-white"></span>
           <a
